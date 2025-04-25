@@ -66,3 +66,29 @@ styleUrl: './app.component.css',
    - templateURL : file path of component html structure
    - styleUrl : file path of component styles
 4. app.component.spec.ts :
+5. package.json : standard configuration files , list of all third party library and dev dependency used in your project
+
+src/
+├── app/
+│ ├── components/
+│ ├── services/
+│ ├── pages/
+│ ├── app.component.ts
+│ ├── app.config.ts
+│ └── main.ts # Entry point
+├── assets/
+├── environments/ # Environment configs (dev/prod)
+├── styles.css # Global styles
+└── index.html # Main HTML wrapper
+
+1. app Your main application logic
+2. components: Reusable components
+3. services : Shared services (API, logic)
+4. pages : Route-specific views/pages
+5. app.component.ts : Root component
+6. app.config.ts : (New) standalone bootstrap config
+7. main.ts : entry point
+8. assets: Static assets (images, fonts, etc.)
+9. environment: # Environment configs (dev/prod)
+10. styles.css : Global Styles
+11. index.html : MAin HTML Wrapper
