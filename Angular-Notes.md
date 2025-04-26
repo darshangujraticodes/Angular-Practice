@@ -92,3 +92,18 @@ src/
 9. environment: # Environment configs (dev/prod)
 10. styles.css : Global Styles
 11. index.html : MAin HTML Wrapper
+
+### Angular Concepts
+
+- Interpolation `{{}}`
+  It is used when we want to execute js code in HTML file.
+  Pros of Using Interpolation
+  - we can do all arithmatic operation and comparison operator
+    Cons of Using Interpolation
+  - we declare new variable
+  - We cannot use for loop
+  - we cannot use increment or decrement operator
+
+### Angular commands to generate code
+
+1. component : `ng generate component login` : it helps to generate component with 4 files in it(css, html, ts, spec.ts)
