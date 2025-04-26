@@ -106,4 +106,7 @@ src/
 
 ### Angular commands to generate code
 
-1. component : `ng generate component login` : it helps to generate component with 4 files in it(css, html, ts, spec.ts)
+1. component : `ng generate component login` | `ng g c login` : it helps to generate component with 4 files in it(css, html, ts, spec.ts).
+   Component is the small snippet of code which is created to reuse and integrate to make complete web app.
+
+2. Custom Component :
