@@ -195,6 +195,27 @@
       <app-profile></app-profile>
     </div>
   </section>
+
+  <section>
+    <div>
+      <h1 class="textCenter">Counter Project</h1>
+    </div>
+
+    <div>
+      <p class="counterData">{{ counter }}</p>
+    </div>
+    <div class="counterBtnWrap">
+      <button (click)="handleCounter('add')" class="incBtn counterBtn">
+        Increment
+      </button>
+      <button (click)="handleCounter('subtract')" class="decBtn counterBtn">
+        Decrement
+      </button>
+      <button (click)="handleCounter('reset')" class="counterBtn resetBtn">
+        Reset
+      </button>
+    </div>
+  </section>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

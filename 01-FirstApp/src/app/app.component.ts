@@ -12,4 +12,14 @@ import { ProfileComponent } from './components/profile/profile.component';
 })
 export class AppComponent {
   title = 'Darshan';
+  counter = 0;
+
+  handleCounter(oprType: string): void {
+    if (oprType == 'add') this.counter += 1;
+    if (oprType == 'subtract') {
+      if (this.counter > 0) this.counter -= 1;
+    }
+
+    if (oprType == 'reset') this.counter = 0;
+  }
 }

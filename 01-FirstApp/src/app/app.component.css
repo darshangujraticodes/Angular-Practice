@@ -1,0 +1,45 @@
+.counterData {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15px;
+  background-color: blueviolet;
+  width: 50px;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.counterBtnWrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.counterBtn {
+  font-size: 20px;
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.incBtn {
+  background-color: navy;
+  color: #fff;
+  font-weight: 600;
+}
+
+.decBtn {
+  background-color: firebrick;
+  color: #fff;
+  font-weight: 600;
+}
+
+.resetBtn {
+  background-color: #262626;
+  color: #fff;
+  font-weight: 600;
+}

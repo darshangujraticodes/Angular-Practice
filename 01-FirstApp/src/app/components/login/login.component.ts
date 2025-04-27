@@ -12,5 +12,12 @@ export class LoginComponent {
   handleLoginClick() {
     console.log('Login Button Clicked!');
     this.userType = 'Harry Potter';
+
+    // onclick we are calling other function from handleClick function using this keyword which is used for self or current class reference
+    this.otherFunction();
+  }
+
+  otherFunction() {
+    console.log('other function ');
   }
 }
