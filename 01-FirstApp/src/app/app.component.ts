@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -21,5 +21,13 @@ export class AppComponent {
     }
 
     if (oprType == 'reset') this.counter = 0;
+  }
+
+  handleEvents(event: MouseEvent) {
+    console.log('Mouse ClickEvent');
+
+    console.log('Function called : ', event.type);
+    console.log('Function called : ', (event.target as Element).className);
+    console.log('Function called : ', event.target.name);
   }
 }
