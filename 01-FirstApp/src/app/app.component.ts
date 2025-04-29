@@ -36,6 +36,6 @@ export class AppComponent {
 
     console.log('Function called : ', event.type);
     console.log('Function called : ', (event.target as Element).className);
-    console.log('Function called : ', event.target.name);
+    // console.log('Function called : ', event.target.name);
   }
 }
