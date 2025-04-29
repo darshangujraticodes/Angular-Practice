@@ -3,3 +3,23 @@
 .textCenter {
   text-align: center;
 }
+
+.boxData {
+  width: 250px;
+  height: 200px;
+  background-color: #262626;
+  color: #fff;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  background: peru;
+}
+
+.box3 {
+  background-color: cornflowerblue;
+}

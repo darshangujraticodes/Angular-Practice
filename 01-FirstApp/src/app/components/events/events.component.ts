@@ -7,14 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './events.component.css',
 })
 export class EventsComponent {
-  handleEvent(event: Event, type: string) {
-    if (type === 'click') {
-      console.log(
-        'Events',
-        event.target,
-        event.type,
-        (event.target as Element).className
-      );
+  handleEventType(event: Event, type: string) {
+    if (type == 'click') {
+      console.log('Click Event');
     }
 
     if (type === 'mouseEnter') {

@@ -1,0 +1,95 @@
+<section class="mt-5">
+  <div class="container">
+    <H2 class="text-center"
+      >Angular Control Flow Statement (If Else : Hide Show Toggle)
+    </H2>
+
+    <div>
+      <h5>If Condition</h5>
+      <button class="btn btn-primary" (click)="boxDisplayToggle()">
+        {{ boxDisplay ? "Hide Div Box" : "Show Div Box" }}
+      </button>
+      @if(boxDisplay){
+      <div class="d-flex gap-3 mt-4">
+        <div class="boxData"><p>BOX 1</p></div>
+        <div class="boxData"><p>BOX 2</p></div>
+        <div class="boxData"><p>BOX 3</p></div>
+        <div class="boxData"><p>BOX 4</p></div>
+        <div class="boxData"><p>BOX 5</p></div>
+      </div>
+      }
+    </div>
+
+    <hr />
+
+    <div>
+      <h5>If Else Condition</h5>
+      <button class="btn btn-primary" (click)="showDiffColorBox()">
+        {{ divToggle ? "Show Blue Box" : "Show Orange Box" }}
+      </button>
+
+      @if(divToggle){
+      <div class="d-flex gap-3 mt-4">
+        <div class="boxData box2"><p>BOX 1</p></div>
+        <div class="boxData box2"><p>BOX 2</p></div>
+        <div class="boxData box2"><p>BOX 3</p></div>
+        <div class="boxData box2"><p>BOX 4</p></div>
+        <div class="boxData box2"><p>BOX 5</p></div>
+      </div>
+      }@else{
+      <div class="d-flex gap-3 mt-4">
+        <div class="boxData box3"><p>BOX 1</p></div>
+        <div class="boxData box3"><p>BOX 2</p></div>
+        <div class="boxData box3"><p>BOX 3</p></div>
+        <div class="boxData box3"><p>BOX 4</p></div>
+        <div class="boxData box3"><p>BOX 5</p></div>
+      </div>
+      }
+    </div>
+
+    <H2 class="text-center mt-5"
+      >Angular Control Flow Statement (Else If : Hide Show Toggle)
+    </H2>
+    <div class="">
+      <h5 class="">Show Selected Color Box</h5>
+      <div class="d-flex gap-3 mt-3">
+        <button (click)="selectDisplayBox(1)" class="btn btn-primary">
+          Blue
+        </button>
+        <button (click)="selectDisplayBox(2)" class="btn btn-danger">
+          Red
+        </button>
+        <button (click)="selectDisplayBox(3)" class="btn btn-warning">
+          Yellow
+        </button>
+        <button (click)="selectDisplayBox(4)" class="btn btn-dark">
+          Black
+        </button>
+        <button (click)="selectDisplayBox(0)" class="btn btn-info">
+          Other
+        </button>
+
+        <input
+          type="number"
+          placeholder="Enter the box number"
+          value="{{ color }}"
+          (input)="inputDisplayBox($event)"
+        />
+      </div>
+
+      <div class="my-4 d-flex gap-3">
+        @if(color === 1){
+        <div class="boxData bg-primary"><p>BOX 1</p></div>
+        } @else if(color === 2){
+        <div class="boxData bg-danger"><p>BOX 2</p></div>
+        } @else if(color === 3){
+        <div class="boxData bg-warning"><p>BOX 3</p></div>
+        } @else if(color === 4){
+        <div class="boxData bg-dark"><p>BOX 4</p></div>
+        } @else{
+        <div class="boxData bg-info"><p>BOX 5</p></div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
