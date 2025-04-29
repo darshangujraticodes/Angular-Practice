@@ -1,11 +1,10 @@
+<hr />
 <section class="mt-5">
   <div class="container">
-    <H2 class="text-center"
-      >Angular Control Flow Statement (If Else : Hide Show Toggle)
-    </H2>
+    <H2 class="text-center">Angular Control Flow Statement (If Else) </H2>
 
     <div>
-      <h5>If Condition</h5>
+      <h5>If Condition : only used for 1 Conditions</h5>
       <button class="btn btn-primary" (click)="boxDisplayToggle()">
         {{ boxDisplay ? "Hide Div Box" : "Show Div Box" }}
       </button>
@@ -23,7 +22,7 @@
     <hr />
 
     <div>
-      <h5>If Else Condition</h5>
+      <h5>If Else Condition : only used for 2 Conditions</h5>
       <button class="btn btn-primary" (click)="showDiffColorBox()">
         {{ divToggle ? "Show Blue Box" : "Show Orange Box" }}
       </button>
@@ -47,26 +46,27 @@
       }
     </div>
 
-    <H2 class="text-center mt-5"
-      >Angular Control Flow Statement (Else If : Hide Show Toggle)
-    </H2>
+    <hr />
+
+    <H2 class="text-center mt-5">Angular Control Flow Statement (Else If) </H2>
     <div class="">
+      <h5>Else If Condition : only used for 5 or 6 Conditions</h5>
       <h5 class="">Show Selected Color Box</h5>
       <div class="d-flex gap-3 mt-3">
         <button (click)="selectDisplayBox(1)" class="btn btn-primary">
-          Blue
+          Blue - 1
         </button>
         <button (click)="selectDisplayBox(2)" class="btn btn-danger">
-          Red
+          Red - 2
         </button>
         <button (click)="selectDisplayBox(3)" class="btn btn-warning">
-          Yellow
+          Yellow - 3
         </button>
         <button (click)="selectDisplayBox(4)" class="btn btn-dark">
-          Black
+          Black - 4
         </button>
-        <button (click)="selectDisplayBox(0)" class="btn btn-info">
-          Other
+        <button (click)="selectDisplayBox(5)" class="btn btn-info">
+          Other - 5
         </button>
 
         <input
@@ -90,6 +90,16 @@
         <div class="boxData bg-info"><p>BOX 5</p></div>
         }
       </div>
+    </div>
+
+    <hr />
+
+    <H2 class="text-center mt-5"
+      >Angular Control Flow Statement (Switch Statement)
+    </H2>
+
+    <div>
+      <h5>Switch Statement : Recommended to use for more than 6 Conditions</h5>
     </div>
   </div>
 </section>

@@ -20,14 +20,15 @@ export class ControlflowComponent {
   }
 
   selectDisplayBox(val: number) {
-    if (val > 0) {
+    if (val < 5) {
       this.color = val;
     } else {
-      this.color = 0;
+      this.color = 5;
     }
   }
 
   inputDisplayBox(event: Event) {
-    console.log(event);
+    const num = parseInt((event.target as HTMLInputElement).value);
+    this.selectDisplayBox(num);
   }
 }
