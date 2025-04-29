@@ -205,7 +205,7 @@
       <p class="counterData">{{ counter }}</p>
     </div>
     <div class="counterBtnWrap">
-      <button (click)="handleCounter('add')" class="incBtn counterBtn">
+      <button (click)="handleCounter('add')" name="" class="incBtn counterBtn">
         Increment
       </button>
       <button (click)="handleCounter('subtract')" class="decBtn counterBtn">
@@ -218,11 +218,23 @@
   </section>
 
   <section>
+<<<<<<< HEAD
     <app-events></app-events>
   </section>
 
   <section>
     <app-inputforms></app-inputforms>
+=======
+    <div class="" style="display: flex">
+      <div (click)="handleEvents($event)" name="onClickBtn" class="eventBtn">
+        onClick Event
+      </div>
+      <div class="eventBtn">MouseHover Event</div>
+      <div class="eventBtn">MouseLeave Event</div>
+      <div class="eventBtn">Event</div>
+      <div class="eventBtn">onClick Event</div>
+    </div>
+>>>>>>> b93573e3f0475925170e74de57d2d1c4b00be18d
   </section>
 </main>
 
