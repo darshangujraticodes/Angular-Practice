@@ -1,0 +1,112 @@
+<h2 class="text-center mt-5 mb-4">Input Forms Handling in Angular</h2>
+
+<h2 class="text-center mt-5 mb-4">
+  Angular Input Form using function and properties
+</h2>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="d-flex justify-content-center">
+          <div>
+            <div>
+              <input
+                type="text"
+                class="inputField"
+                value="{{ username }}"
+                name="username"
+                placeholder="Enter Your Username"
+                (input)="handleInput($event, 'username')"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                value="{{ email }}"
+                class="inputField"
+                placeholder="Enter Your Email"
+                (input)="handleInput($event, 'email')"
+              />
+            </div>
+
+            <div>
+              <!-- <button type="submit" class="btn btn-dark me-3">Submit</button> -->
+              <button (click)="getData()" class="btn btn-dark me-3">
+                getData
+              </button>
+              <button (click)="setData()" class="btn btn-dark">setData</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="">
+          <h4 class="text-center mb-4">Concurrent Display</h4>
+          <h4><span class="inputData"> Username :</span> {{ username }}</h4>
+          <h4><span class="inputData">Email :</span> {{ email }}</h4>
+          <!-- <h4><span class="inputData">Password :</span> {{ password }}</h4> -->
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="">
+          <h4 class="text-center mb-4">Completion Display</h4>
+
+          <h4>
+            <span class="inputData"> Username :</span> {{ displayUsername }}
+          </h4>
+          <h4><span class="inputData">Email :</span> {{ displayEmail }}</h4>
+          <!-- <h4><span class="inputData">Password :</span> {{ password }}</h4> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="text-center mt-5 mb-4">
+  Angular Input Form using Template reference variable (variableName)
+</h2>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="d-flex justify-content-center">
+          <div>
+            <div>
+              <input
+                type="text"
+                class="inputField"
+                value="{{ refUsername }}"
+                name="username"
+                placeholder="Enter Your Username"
+                #usernameField
+              />
+            </div>
+
+            <div>
+              <!-- <button type="submit" class="btn btn-dark me-3">Submit</button> -->
+              <button
+                (click)="getRefData(usernameField.value)"
+                class="btn btn-dark me-3"
+              >
+                getData
+              </button>
+              <!-- <button (click)="setData()" class="btn btn-dark">setData</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="">
+          <h4 class="text-center mb-4">Completion Display</h4>
+
+          <h4><span class="inputData"> Username :</span> {{ refUsername }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

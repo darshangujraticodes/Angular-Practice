@@ -2,11 +2,19 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EventsComponent } from './components/events/events.component';
+import { InputformsComponent } from './components/inputforms/inputforms.component';
 
 // decorator
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent, ProfileComponent],
+  imports: [
+    RouterOutlet,
+    LoginComponent,
+    ProfileComponent,
+    EventsComponent,
+    InputformsComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

@@ -1,0 +1,25 @@
+<h3 class="sectionHeader mt-4">Javascript Events</h3>
+
+<div class="d-flex">
+  <div class="eventBtn" (click)="handleEvent($event, 'click')">
+    <p>onClick Events</p>
+  </div>
+  <div class="eventBtn" (mouseenter)="handleEvent($event, 'mouseEnter')">
+    <p>MouseEnter Events</p>
+  </div>
+  <div class="eventBtn" (mouseleave)="handleEvent($event, 'mouseLeave')">
+    <p>MouseLeave Events</p>
+  </div>
+  <div>
+    <div>
+      <input
+        type="text"
+        class=""
+        (focus)="handleInput($event, 'focus')"
+        (blur)="handleInput($event, 'blur')"
+        (input)="handleInput($event, 'input')"
+        placeholder="enter any value"
+      />
+    </div>
+  </div>
+</div>
