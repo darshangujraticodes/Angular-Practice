@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AngularloopComponent {
   selectedUser = ['Bruce', 'Ron', 'Abhishek', 'Harsh', 'Roshni', 'Natasha'];
 
+  selectedHero = '';
+
   marvelHeroes = [
     {
       name: 'Tony Stark',
@@ -71,4 +73,9 @@ export class AngularloopComponent {
       attackTypes: ['Chaos Magic', 'Telekinesis', 'Mind Warp'],
     },
   ];
+
+  userSelectedHero(name: string) {
+    alert(`Your Selected Hero : ${name}`);
+    this.selectedHero = name;
+  }
 }

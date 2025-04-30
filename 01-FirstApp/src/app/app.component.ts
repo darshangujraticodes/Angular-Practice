@@ -6,6 +6,7 @@ import { EventsComponent } from './components/events/events.component';
 import { InputformsComponent } from './components/inputforms/inputforms.component';
 import { ControlflowComponent } from './components/controlflow/controlflow.component';
 import { AngularloopComponent } from './components/angularloop/angularloop.component';
+import { AngularsignalsComponent } from './components/angularsignals/angularsignals.component';
 
 // decorator
 @Component({
@@ -18,6 +19,7 @@ import { AngularloopComponent } from './components/angularloop/angularloop.compo
     InputformsComponent,
     ControlflowComponent,
     AngularloopComponent,
+    AngularsignalsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

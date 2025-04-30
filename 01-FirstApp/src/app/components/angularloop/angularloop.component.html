@@ -12,10 +12,13 @@
     <h4>For Loop for Array Object</h4>
 
     <div>
-      @for(heroItem of marvelHeroes; track heroItem){
+      <h4>Selected Hero : {{ selectedHero }}</h4>
+
+      @for(heroItem of marvelHeroes; track heroItem; let id=$index ){
 
       <div>
-        <p>
+        <p class="mb-1 mt-3">
+          <span>{{ id + 1 }}]</span> <br />
           <span> Name : {{ heroItem.name }} </span> <br />
           <span> Hero Name : {{ heroItem.heroName }} </span> <br />
           <span> Strength : {{ heroItem.strength }} </span> <br />
@@ -25,9 +28,14 @@
             {{ attack }}, }
           </span>
         </p>
+        <button class="rounded" (click)="userSelectedHero(heroItem.heroName)">
+          Select My Hero
+        </button>
       </div>
 
       }
     </div>
   </div>
 </section>
+
+<hr />

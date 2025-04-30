@@ -1,0 +1,34 @@
+<section class="my-3">
+  <div class="container">
+    <h2 class="text-center">Angular Signals</h2>
+
+    <div class="d-flex gap-3">
+      <button (click)="count.set(40)" class="btn btn-dark mb-3">
+        Update Signal Data
+      </button>
+
+      <button class="btn btn-dark mb-3" (click)="updateValue()">
+        Increment X
+      </button>
+    </div>
+
+    <div>
+      <p>Normal Value Display = {{ x }}</p>
+      <p>Signal Value Display = {{ count() }}</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="d-flex gap-3">
+      <button (click)="signalNum('inc')" class="btn btn-success">
+        Increase By 1
+      </button>
+      <h2>{{ num() }}</h2>
+      <button (click)="signalNum('dec')" class="btn btn-danger">
+        Decrease By 1
+      </button>
+    </div>
+  </div>
+</section>

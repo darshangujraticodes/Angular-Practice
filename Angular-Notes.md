@@ -110,3 +110,5 @@ src/
    Component is the small snippet of code which is created to reuse and integrate to make complete web app.
 
 2. Custom Component :
+
+### Angular Internal State management called : signals it is similar to context api in react
