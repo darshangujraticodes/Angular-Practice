@@ -1,0 +1,33 @@
+<section class="mt-3">
+  <div class="container">
+    <h2 class="text-center">Angular For Loop</h2>
+
+    <h4>For Loop for Single Value Array</h4>
+    <ul>
+      @for(user of selectedUser; track user){
+      <li>{{ user }}</li>
+      }
+    </ul>
+
+    <h4>For Loop for Array Object</h4>
+
+    <div>
+      @for(heroItem of marvelHeroes; track heroItem){
+
+      <div>
+        <p>
+          <span> Name : {{ heroItem.name }} </span> <br />
+          <span> Hero Name : {{ heroItem.heroName }} </span> <br />
+          <span> Strength : {{ heroItem.strength }} </span> <br />
+          <span>
+            Attacking Skills : @for(attack of heroItem.attackTypes; track
+            attack){
+            {{ attack }}, }
+          </span>
+        </p>
+      </div>
+
+      }
+    </div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { EventsComponent } from './components/events/events.component';
 import { InputformsComponent } from './components/inputforms/inputforms.component';
 import { ControlflowComponent } from './components/controlflow/controlflow.component';
+import { AngularloopComponent } from './components/angularloop/angularloop.component';
 
 // decorator
 @Component({
@@ -16,6 +17,7 @@ import { ControlflowComponent } from './components/controlflow/controlflow.compo
     EventsComponent,
     InputformsComponent,
     ControlflowComponent,
+    AngularloopComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
