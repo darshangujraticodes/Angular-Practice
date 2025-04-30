@@ -101,5 +101,71 @@
     <div>
       <h5>Switch Statement : Recommended to use for more than 6 Conditions</h5>
     </div>
+
+    <div class="d-flex gap-3 mb-4">
+      <button class="btn btn-danger" (click)="switchAction('red')">Red</button>
+      <button class="btn btn-success" (click)="switchAction('green')">
+        Green
+      </button>
+      <button class="btn btn-warning" (click)="switchAction('yellow')">
+        Yellow
+      </button>
+      <button class="btn btn-primary" (click)="switchAction('blue')">
+        Blue
+      </button>
+      <button class="btn btn-secondary" (click)="switchAction('gray')">
+        Gray
+      </button>
+    </div>
+
+    <div>
+      @switch( switchColor ) { @case("red"){
+
+      <div class="d-flex align-items-center">
+        <h1>Selected Color is</h1>
+        <div class="circleMark bg-danger mx-2 mb-2"></div>
+        <h1>Red</h1>
+      </div>
+
+      } @case("black"){
+
+      <div class="d-flex align-items-center">
+        <h1>Selected Color is</h1>
+        <div class="circleMark bg-dark mx-2 mb-2"></div>
+        <h1>Black</h1>
+      </div>
+
+      } @case("green"){
+
+      <div class="d-flex align-items-center">
+        <h1>Selected Color is</h1>
+        <div class="circleMark bg-success mx-2 mb-2"></div>
+        <h1>Green</h1>
+      </div>
+
+      } @case("yellow"){
+
+      <div class="d-flex align-items-center">
+        <h1>Selected Color is</h1>
+        <div class="circleMark bg-warning mx-2 mb-2"></div>
+        <h1>Yellow</h1>
+      </div>
+
+      } @case("blue"){
+
+      <div class="d-flex align-items-center">
+        <h1>Selected Color is</h1>
+        <div class="circleMark bg-primary mx-2 mb-2"></div>
+        <h1>Blue</h1>
+      </div>
+
+      } @default{
+      <div class="d-flex align-items-center">
+        <h1>Selected Color is</h1>
+        <div class="circleMark bg-secondary mx-2 mb-2"></div>
+        <h1>Gray</h1>
+      </div>
+      } }
+    </div>
   </div>
 </section>

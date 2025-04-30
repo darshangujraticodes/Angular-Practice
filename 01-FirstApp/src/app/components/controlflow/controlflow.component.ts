@@ -11,6 +11,8 @@ export class ControlflowComponent {
   divToggle = true;
   color = 3;
 
+  switchColor = 'black';
+
   boxDisplayToggle() {
     this.boxDisplay = !this.boxDisplay;
   }
@@ -30,5 +32,9 @@ export class ControlflowComponent {
   inputDisplayBox(event: Event) {
     const num = parseInt((event.target as HTMLInputElement).value);
     this.selectDisplayBox(num);
+  }
+
+  switchAction(colVal: string) {
+    this.switchColor = colVal;
   }
 }
