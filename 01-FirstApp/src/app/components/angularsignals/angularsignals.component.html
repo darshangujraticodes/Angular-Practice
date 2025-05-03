@@ -32,3 +32,36 @@
     </div>
   </div>
 </section>
+
+<section>
+  <div class="container">
+    <h2 class="text-center">Angular Computed Signals</h2>
+    <ul>
+      <li>
+        Computed signals cannot be update forcefully it is only updated when
+        there is change in dependecy signal value
+      </li>
+      <li>
+        Note here we are updating x and z not z becoz is compute signal which
+        automatically get changed once the dependecy variable (x,y) changed.
+      </li>
+    </ul>
+
+    <div>
+      <span> x = {{ compX() }} </span> <br />
+      <span> y = {{ compY() }} </span> <br />
+      Computed Signal Add Value = <span> {{ compZ() }} </span>
+    </div>
+    <div class="mt-3">
+      <button (click)="updateCompX()" class="btn btn-primary">
+        Update X with 20
+      </button>
+      <button (click)="updateCompY()" class="btn btn-primary ms-3">
+        Update Y with 30
+      </button>
+      <button (click)="resetComputeSignal()" class="btn btn-dark ms-3">
+        Reset x = 40 & y = 60
+      </button>
+    </div>
+  </div>
+</section>
