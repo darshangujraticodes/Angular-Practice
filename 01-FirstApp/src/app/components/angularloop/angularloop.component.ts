@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AngularloopComponent {
   selectedUser = ['Bruce', 'Ron', 'Abhishek', 'Harsh', 'Roshni', 'Natasha'];
 
+  // selectedUser = [];
+
   selectedHero = '';
 
   marvelHeroes = [

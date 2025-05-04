@@ -1,0 +1,18 @@
+<hr />
+<section class="py-2">
+  <div class="container">
+    <h2 class="text-center">Angular Effect</h2>
+
+    <div>
+      @if(displayEvenCounter){
+      <h3 class="bg-primary text-white p-3 rounded">Found Even Counter!</h3>
+      }
+
+      <p class="fs-3">Counter : {{ counter() }}</p>
+
+      <button (click)="incrementData()" class="btn btn-dark">
+        Increment Counter
+      </button>
+    </div>
+  </div>
+</section>

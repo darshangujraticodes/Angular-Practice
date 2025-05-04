@@ -1,0 +1,29 @@
+<section class="py-3">
+  <div class="container">
+    <h2 class="text-center">Angular Forms</h2>
+    <p class="fs-5">Two Way Binding</p>
+
+    <div>
+      <input
+        type="text"
+        (input)="showName($event)"
+        placeholder="Enter Your Name"
+        class="rounded p-1"
+      />
+      <button (click)="displayNameData()" class="ms-3 btn btn-dark">
+        Show Input Value
+      </button>
+      <h5 class="mt-2">{{ displayName }}</h5>
+      <br />
+
+      <input
+        [(ngModel)]="email"
+        type="text"
+        placeholder="Enter Your Email"
+        class="rounded p-1"
+      />
+      <button class="ms-3 btn btn-dark">Show Input Value</button>
+      <h5 class="mt-2">{{ email }}</h5>
+    </div>
+  </div>
+</section>

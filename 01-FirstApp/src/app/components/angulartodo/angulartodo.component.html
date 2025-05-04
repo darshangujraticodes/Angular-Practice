@@ -1,0 +1,47 @@
+<section class="py-3">
+  <div class="container">
+    <h2 class="text-center">Angular Todo List</h2>
+    <div class="todoWrap">
+      <div class="todoInputWrap">
+        <input
+          type="text"
+          placeholder="Enter Your Task Name"
+          class="rounded p-1"
+          [(ngModel)]="taskName"
+        />
+        <select
+          name="taskStatus"
+          [(ngModel)]="taskStatus"
+          class="rounded p-1 ms-3"
+          id="taskStatus"
+        >
+          <option hidden value="">Select Status</option>
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+          <option value="working">Working</option>
+        </select>
+        <button (click)="addTodoTask()" class="btn btn-dark ms-3">
+          Add New Task
+        </button>
+      </div>
+      <div class="taskContentWrap mt-3">
+        <table>
+          <thead>
+            <tr>
+              <th class="wd1">No.</th>
+              <th class="wd2">Task Title</th>
+              <th class="wd3">Task Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Complete Angular Course</td>
+              <td>Pending</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

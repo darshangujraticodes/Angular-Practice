@@ -35,6 +35,25 @@
 
       }
     </div>
+
+    <hr />
+
+    <h2 class="mt-3 text-center">Angular Loop Contextual Variables</h2>
+
+    <div>
+      @for( user of selectedUser; track user; let i = $index; let f = $first;
+      let lt = $last; let ct = $count ; let ev = $even; let odd = $odd ){
+      @if(f){
+      <h4>{{ i + 1 }} | {{ user }} (First)</h4>
+      }@else if(lt){
+      <h4>{{ i + 1 }} | {{ user }} (Last)</h4>
+      Total Count : {{ ct }}
+      }@else {
+      <h4>{{ i + 1 }} | {{ user }}</h4>
+      } }@empty{
+      <h4>No Data Found !</h4>
+      }
+    </div>
   </div>
 </section>
 
