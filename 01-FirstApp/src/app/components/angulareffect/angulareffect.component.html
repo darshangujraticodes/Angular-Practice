@@ -14,5 +14,28 @@
         Increment Counter
       </button>
     </div>
+    <hr />
+  </div>
+</section>
+
+<section class="py-2">
+  <div class="container">
+    <h2 class="text-center">Dynamic Styling</h2>
+
+    <div>
+      <p
+        [style.backgroundColor]="bgColor"
+        [style.color]="textColor"
+        [style.padding.px]="10"
+        [style.borderRadius.px]="10"
+        [style.border]="border"
+      >
+        Dynamic Style Text Data
+      </p>
+
+      <button (click)="switchThemeMode()" class="rounded">
+        {{ darkMode ? "Light Mode" : "Dark Mode" }}
+      </button>
+    </div>
   </div>
 </section>

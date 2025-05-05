@@ -3,25 +3,54 @@
     <h2 class="text-center">Angular Todo List</h2>
     <div class="todoWrap">
       <div class="todoInputWrap">
-        <input
-          type="text"
-          placeholder="Enter Your Task Name"
-          class="rounded p-1"
-          [(ngModel)]="taskName"
-        />
-        <select
-          name="taskStatus"
-          [(ngModel)]="taskStatus"
-          class="rounded p-1 ms-3"
-          id="taskStatus"
-        >
-          <option hidden value="">Select Status</option>
-          <option value="completed">Completed</option>
-          <option value="pending">Pending</option>
-          <option value="working">Working</option>
-        </select>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter Your Task Name"
+            class="rounded p-1"
+            [(ngModel)]="taskName"
+          />
+
+          @if(error.includes('taskNameError')){
+          <p class="mt-1 textRed">Please Enter Valid Task Name</p>
+          }
+        </div>
+
+        <div class="my-3">
+          <select
+            name="taskStatus"
+            [(ngModel)]="taskStatus"
+            class="rounded p-1 ms-3"
+            id="taskStatus"
+          >
+            <option hidden value="">Select Status</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+            <option value="working">Working</option>
+          </select>
+          @if(error.includes('taskStatusError')){
+          <p class="mt-1 textRed">Select Your Task Status</p>
+          }
+        </div>
+
+        @if(editMode){
+
+        <button (click)="updateTaskData()" class="btn btn-dark ms-3">
+          Update Task Data
+        </button>
+
+        }@else{
         <button (click)="addTodoTask()" class="btn btn-dark ms-3">
           Add New Task
+        </button>
+        }
+
+        <button (click)="resetTodo()" class="btn btn-dark ms-3">
+          Input Reset
+        </button>
+
+        <button (click)="taskReset()" class="btn btn-dark ms-3">
+          Reset Todo Task
         </button>
       </div>
       <div class="taskContentWrap mt-3">
@@ -31,14 +60,33 @@
               <th class="wd1">No.</th>
               <th class="wd2">Task Title</th>
               <th class="wd3">Task Status</th>
+              <th class="wd2">Actions</th>
             </tr>
           </thead>
           <tbody>
+            @for(taskData of taskList; track taskData; let i = $index){
             <tr>
-              <td>1</td>
-              <td>Complete Angular Course</td>
-              <td>Pending</td>
+              <td>{{ i + 1 }}</td>
+              <td>{{ taskData.task }}</td>
+              <td>{{ taskData.status }}</td>
+              <td>
+                <div>
+                  <button
+                    (click)="updateTask(taskData.id)"
+                    class="btn btn-warning"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="deleteTask(taskData.id)"
+                    class="btn btn-danger ms-3"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </td>
             </tr>
+            }
           </tbody>
         </table>
       </div>
