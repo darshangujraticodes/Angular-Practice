@@ -10,6 +10,7 @@ import { AngularsignalsComponent } from './components/angularsignals/angularsign
 import { AngulareffectComponent } from './components/angulareffect/angulareffect.component';
 import { AngularformsComponent } from './components/angularforms/angularforms.component';
 import { AngulartodoComponent } from './components/angulartodo/angulartodo.component';
+import { AngualardirectivesComponent } from './components/angualardirectives/angualardirectives.component';
 
 // decorator
 @Component({
@@ -26,6 +27,7 @@ import { AngulartodoComponent } from './components/angulartodo/angulartodo.compo
     AngulareffectComponent,
     AngularformsComponent,
     AngulartodoComponent,
+    AngualardirectivesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
