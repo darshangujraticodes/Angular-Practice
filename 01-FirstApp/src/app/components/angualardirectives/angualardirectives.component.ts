@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import {
+  NgFor,
+  NgIf,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
 
 @Component({
   selector: 'app-angualardirectives',
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, NgSwitchCase, NgSwitch, NgSwitchDefault],
   templateUrl: './angualardirectives.component.html',
   styleUrl: './angualardirectives.component.css',
 })
@@ -13,6 +19,8 @@ export class AngualardirectivesComponent {
   login = false;
 
   block = 6;
+
+  selectedColor = '';
 
   marvelHeroes = [
     'Iron Man',
