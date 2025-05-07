@@ -12,6 +12,7 @@ import { AngularformsComponent } from './components/angularforms/angularforms.co
 import { AngulartodoComponent } from './components/angulartodo/angulartodo.component';
 import { AngualardirectivesComponent } from './components/angualardirectives/angualardirectives.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 // decorator
 @Component({
@@ -30,6 +31,7 @@ import { HomeComponent } from './pages/home/home.component';
     AngulartodoComponent,
     AngualardirectivesComponent,
     HomeComponent,
+    HeaderComponent,
 
     RouterLink,
     RouterOutlet,
