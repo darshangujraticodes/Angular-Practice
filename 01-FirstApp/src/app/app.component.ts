@@ -1,5 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EventsComponent } from './components/events/events.component';
@@ -11,6 +11,7 @@ import { AngulareffectComponent } from './components/angulareffect/angulareffect
 import { AngularformsComponent } from './components/angularforms/angularforms.component';
 import { AngulartodoComponent } from './components/angulartodo/angulartodo.component';
 import { AngualardirectivesComponent } from './components/angualardirectives/angualardirectives.component';
+import { HomeComponent } from './pages/home/home.component';
 
 // decorator
 @Component({
@@ -28,6 +29,10 @@ import { AngualardirectivesComponent } from './components/angualardirectives/ang
     AngularformsComponent,
     AngulartodoComponent,
     AngualardirectivesComponent,
+    HomeComponent,
+
+    RouterLink,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
