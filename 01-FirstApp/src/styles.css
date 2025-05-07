@@ -55,3 +55,19 @@ button {
 .textRed {
   color: red;
 }
+
+nav h3,
+nav h5 {
+  color: #262626;
+  padding: 8px;
+}
+
+.activeNav {
+  background: #0b5ed7;
+  border-radius: 10px;
+}
+
+nav .activeNav h5 {
+  color: #fff !important;
+  padding: 10px 12px;
+}

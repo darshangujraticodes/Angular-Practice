@@ -1,7 +1,7 @@
 import { Component, EventEmitter } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { ProfileComponent } from './components/profile/profile.component';
+
 import { EventsComponent } from './components/events/events.component';
 import { InputformsComponent } from './components/inputforms/inputforms.component';
 import { ControlflowComponent } from './components/controlflow/controlflow.component';
@@ -13,6 +13,7 @@ import { AngulartodoComponent } from './components/angulartodo/angulartodo.compo
 import { AngualardirectivesComponent } from './components/angualardirectives/angualardirectives.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 // decorator
 @Component({

@@ -2,22 +2,46 @@
   <div class="container">
     <div class="d-flex align-items-center justify-content-between">
       <div>
-        <a class="text-decoration-none" routerLink="home">
+        <a class="text-decoration-none" routerLink="/">
           <h3>Logo</h3>
         </a>
       </div>
       <div class="d-flex">
-        <a class="me-3 text-decoration-none" routerLink="home">
+        <a
+          class="me-3 text-decoration-none"
+          routerLinkActive="activeNav"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/"
+        >
           <h5 class="mb-0">Home</h5></a
         >
-        <a class="me-3 text-decoration-none" routerLink="about">
+        <a
+          class="me-3 text-decoration-none"
+          routerLinkActive="activeNav"
+          routerLink="about"
+        >
           <h5 class="mb-0">About</h5></a
         >
-        <a class="me-3 text-decoration-none" routerLink="service">
+        <a
+          class="me-3 text-decoration-none"
+          routerLinkActive="activeNav"
+          routerLink="service"
+        >
           <h5 class="mb-0">Service</h5></a
         >
-        <a class="me-3 text-decoration-none" routerLink="contact">
+        <a
+          class="me-3 text-decoration-none"
+          routerLinkActive="activeNav"
+          routerLink="contact"
+        >
           <h5 class="mb-0">Contact</h5></a
+        >
+        <a
+          class="me-3 text-decoration-none"
+          routerLinkActive="activeNav"
+          routerLink="test"
+        >
+          <h5 class="mb-0">Test</h5></a
         >
       </div>
     </div>
