@@ -1,0 +1,53 @@
+<section>
+  <div class="container">
+    <h1 class="text-center">Contact Page</h1>
+
+    <div>
+      <form [formGroup]="registerForm" (ngSubmit)="handleRegisterForm()">
+        <div class="m-3">
+          <label for="name">Name : </label>
+          <input formControlName="name" type="text" />
+
+          @if (name?.invalid && name?.hasError('required') && name?.touched) {
+            <p class="error">Name is Required !</p>
+          }
+        </div>
+        <div class="m-3">
+          <label for="email">Email : </label>
+          <input type="email" formControlName="email" />
+          @if (email?.invalid && email?.hasError('required') && email?.touched) {
+            <p class="error">Email is Required!</p>
+          }
+
+          @if (email?.invalid && email?.errors?.['email'] && email?.touched) {
+            <p class="error">Enter Valid Email!</p>
+          }
+        </div>
+        <div class="m-3">
+          <label for="password">Password : </label>
+          <input type="password" formControlName="password" />
+          @if (password?.invalid && password?.touched) {
+            @if (password?.errors?.['required']) {
+              <p class="error">Password is required!</p>
+            } @else if (password?.errors?.['minlength']) {
+              <p class="error">Minimum length is 5!</p>
+            } @else if (password?.errors?.['pattern']) {
+              <p class="error">Must contain uppercase, lowercase and number!</p>
+            }
+          }
+        </div>
+        <div class="m-3">
+          <button type="submit" class="btn m-3">Submit</button>
+
+          <button class="btn m-3" (click)="reset()">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <h4>Name : {{ registerForm.value.name }}</h4>
+      <h4>Email : {{ registerForm.value.email }}</h4>
+      <h4>Password : {{ registerForm.value.password }}</h4>
+    </div>
+  </div>
+</section>

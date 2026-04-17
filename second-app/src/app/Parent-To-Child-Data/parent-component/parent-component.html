@@ -1,0 +1,22 @@
+<div>
+    <h3>
+      Parent Component 
+    </h3>
+
+    <!-- <h4>
+        Welcome, {{username()}}
+    </h4> -->
+
+    <div>
+        <input type="text"  [value]="usernameInput()"  (input)="usernameInput.set($event.target.value)"   placeholder="Enter User Name">
+        <button (click)="addUser()">Add User</button>
+    </div>
+
+    <app-child-component  [username]="username()" ></app-child-component>
+
+
+    @for(user of userList(); track user){
+          <app-child-component  [user]="user" ></app-child-component>
+    }
+
+</div>

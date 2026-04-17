@@ -1,0 +1,48 @@
+<hr />
+
+<section>
+  <div class="container">
+    <h2>Todo List</h2>
+
+    <div>
+      <h5>
+        {{ taskTitle() }}
+      </h5>
+      Task Name :
+      <input type="text" [value]="taskTitle()" (input)="taskTitle.set($event.target.value)" />
+      <br />
+      <br />
+      <button (click)="addNewTask()">Add New Task to List</button>
+      <br />
+      <br />
+    </div>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Task Tick</th>
+            <th colspan="2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of task(); track item.id) {
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.title }}</td>
+              <td>{{ item.status }}</td>
+              <td><button>Task Done</button></td>
+              <td><button (click)="deleteTask(item.id)">Delete</button></td>
+              <td><button>Update</button></td>
+            </tr>
+          } @empty {
+            <span>No Task Found</span>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

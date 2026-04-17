@@ -1,0 +1,17 @@
+.on-btn {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.off-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+}

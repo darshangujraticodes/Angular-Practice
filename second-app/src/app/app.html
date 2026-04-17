@@ -1,0 +1,68 @@
+<section>
+  <div class="container">
+    <h2>
+      Parent to Child Data Passing (App.html)
+    </h2>
+
+    <app-parent-component   ></app-parent-component>
+
+
+  </div>
+</section>
+
+<section>
+  <h2>
+      Child to Parent Data Passing (App.html)
+    </h2>
+
+    <app-parent-comp></app-parent-comp>
+
+</section>
+
+<app-service-comp></app-service-comp>
+
+
+
+
+<section>
+    <div class="container">
+        <h2>Pipes</h2>
+        <ul>
+          <li>
+            html ui element formatter 
+          </li>
+          <li>
+            no need of extra css declaration can be handle in code directly
+          </li>
+        </ul>
+
+        <div>
+          <h4>
+            Welcome, {{username()  | titlecase  }}
+          </h4>
+        </div>
+
+        <div>
+          <input    [value]="nameInput()" placeholder="Enter Your Name" 
+           (input) ="nameInput.set($any($event.target).value)"  type="text">
+            <h4>Input Value : {{nameInput() | uppercase   }}</h4>
+            <h4>Input Value : {{amount()| currency:'INR'   }}</h4>
+            <h4>Date : {{ date() | date  }}</h4>
+            <h4>Date : {{ date() | date: 'mm'  }}</h4>
+            <h4>Date : {{ date() | date: 'dd'  }}</h4>
+            <h4>Date : {{ date() | date :'yyyy'  }}</h4>
+            <h4>Date : {{ date() | date : 'short' }}</h4>
+            <h4>Date : {{ date() | date : 'full' }}</h4>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+
+

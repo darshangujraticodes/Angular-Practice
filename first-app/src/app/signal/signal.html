@@ -1,0 +1,66 @@
+<hr />
+<section>
+  <div class="container">
+    <h2 class="section-title">Signal</h2>
+
+    <ul>
+      <li>there are 3 types : writable, derived and effect</li>
+      <li>Signal is wrapper around value that give signal when value changes</li>
+    </ul>
+
+    <h4>Normal Data : {{ normalData }}</h4>
+    <h4>Signal Data : {{ signalData() }}</h4>
+
+    <button (click)="normalDataCounter()">Data Counter ++</button>
+    <button (click)="signalDataCounter()">Data Counter ++</button>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p>----------------------------</p>
+    <h2 class="section-title">Computed Signal</h2>
+
+    <ul>
+      <li>
+        It is the special type of signal which get updated or triggered only when dependent signal
+        value is updated
+      </li>
+    </ul>
+
+    <div>
+      <h4>Width : {{ width() }}m</h4>
+      <h4>Height : {{ height() }}m</h4>
+      <h4>Area : {{ area() }}m^2</h4>
+
+      <button (click)="updateHeight()">Update Height</button>
+      <button (click)="updateWidth()">Update Height</button>
+      <button (click)="reset()">Reset</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p>----------------------------</p>
+
+    <h2 class="section-title">Effect</h2>
+
+    <ul>
+      <li>
+        It is the special type of signal which get updated or triggered only when dependent signal
+        value is updated
+      </li>
+    </ul>
+
+    <div>
+      <h4>Width : {{ width() }}m</h4>
+      <h4>Height : {{ height() }}m</h4>
+      <h4>Area : {{ area() }}m^2</h4>
+
+      <button (click)="updateHeight()">Update Height</button>
+      <button (click)="updateWidth()">Update Height</button>
+      <button (click)="reset()">Reset</button>
+    </div>
+  </div>
+</section>

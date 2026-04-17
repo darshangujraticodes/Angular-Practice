@@ -1,0 +1,35 @@
+<hr />
+<section>
+  <div class="container">
+    <h2 class="section-title">#Event Binding</h2>
+
+    <h5>Button Click Event</h5>
+    <button (click)="handleClick()">Click Me</button>
+
+    <h5>Counter : {{ counter }}</h5>
+    <button (click)="countOperation('plus')">Count++</button>
+    <button (click)="countOperation('minus')">Count--</button>
+
+    <div>
+      <h5>Input Event</h5>
+      <input type="text" (input)="handleEvent($event)" placeholder="Enter Value" />
+      <input type="text" (change)="handleEvent($event)" placeholder="Enter Value" />
+
+      <button (click)="handleEvent($event)">Click Button</button>
+
+      <select name="" (change)="handleEvent($event)" id="">
+        <option value="">select your vehicle</option>
+        <option value="car">car</option>
+        <option value="bike">bike</option>
+        <option value="bicycle">bicycle</option>
+      </select>
+
+      <input type="text" (blur)="handleEvent($event)" placeholder="Enter Value" />
+
+      <input type="text" (focus)="handleEvent($event)" placeholder="Enter Value" />
+
+      <div (mouseenter)="handleEvent($event)" class="div1"></div>
+      <div (mouseleave)="handleEvent($event)" class="div2"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  padding: 20px 0;
+  border-bottom: 2px solid #262626;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --------- */
+
+header {
+  padding: 10px;
+  box-shadow: 2;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-wrap {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.menu-link {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.btn {
+  font-size: 18px;
+  color: #fff;
+  background-color: #262626;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.active {
+  background-color: #262626;
+  color: #fff;
+}
+
+.m-3 {
+  margin: 15px;
+}
+
+.error {
+  font-size: 18px;
+  color: red;
+}

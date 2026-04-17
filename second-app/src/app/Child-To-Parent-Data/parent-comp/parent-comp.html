@@ -1,0 +1,46 @@
+
+
+
+
+<div>
+    <h4>Parent Input User : {{nameInput()}}</h4>
+
+    <h4>Child Selected User : {{selectUserName()}}</h4>
+
+
+    <input type="text"  [value]="nameInput()"  (input)="nameInput.set($event.target.value)"  placeholder="Enter Your Name" >  <button  (click)="addNewUser()">Submit</button> <br>   <br>
+</div>
+
+
+<div>
+
+    <table>
+        <thead>
+            <tr>
+                 <th>
+                Name
+            </th>
+            <th >
+                Action
+            </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for(user of userList(); track user){
+                <tr>
+                    <app-child-comp  (deleteUser)="deleteUser($event)"   (selectedUser)="selectedUser($event)"  [user]="user" ></app-child-comp>
+                </tr>
+                }
+        </tbody>
+    </table>
+   
+
+
+    <h4>
+        Global State Counter : {{ state.counter() }}
+    </h4>
+   
+</div>
+
+

@@ -1,0 +1,49 @@
+<hr />
+<section>
+  <div class="container">
+    <h2 class="section-title">#Two Way Binding</h2>
+
+    <h4>Two Way Data Binding With Signal Value</h4>
+    <h5>
+      {{ nameSignal() }}
+    </h5>
+    <input type="text" [value]="nameSignal()" (input)="nameSignal.set($event.target.value)" />
+
+    <p>-------------------</p>
+
+    <h4>Two Way Data Binding With Property Value</h4>
+    <ul>
+      <li>[(ngModel)]="age" it is combination of propertyBinding and eventBinding</li>
+      <li>import formModule in .ts file in imports</li>
+    </ul>
+    <h5>
+      {{ age }}
+    </h5>
+    <input type="text" [(ngModel)]="age" />
+  </div>
+
+  <p>-------------------</p>
+
+  <h4>Two Way Data Binding With Object Value</h4>
+  <h5>Name : {{ userData().name }}</h5>
+  <h5>Email : {{ userData().email }}</h5>
+  <h5>Age : {{ userData().age }}</h5>
+  <input
+    type="text"
+    [value]="userData().name"
+    (input)="updateUserData('name', $event.target.value)"
+    placeholder="Enter Name"
+  />
+  <input
+    type="text"
+    [value]="userData().email"
+    (input)="updateUserData('email', $event.target.value)"
+    placeholder="Enter Email"
+  />
+  <input
+    type="number"
+    [value]="userData().age"
+    (input)="updateUserData('age', $event.target.value)"
+    placeholder="Enter Age"
+  />
+</section>

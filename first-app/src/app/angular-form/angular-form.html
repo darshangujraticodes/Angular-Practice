@@ -1,0 +1,183 @@
+<hr />
+<section>
+  <div class="container">
+    <h2 class="section-title">Angular Form</h2>
+
+    <div>
+      <h5>Entered Name Array : {{ nameArray() }}</h5>
+      <h4>Entered Name : {{ name() }}</h4>
+
+      <label for="name">Name : </label>
+      <input
+        id="name"
+        type="text"
+        [value]="name()"
+        (input)="handleInput($event.target.value)"
+        placeholder="Enter Your Name"
+      />
+    </div>
+
+    <div>
+      <button (click)="updateSignalArray()">Update Array Signal</button>
+    </div>
+  </div>
+</section>
+
+<hr />
+<section>
+  <div class="container">
+    <h2>Angular conditional Statements</h2>
+
+    <div>
+      @if (isLogin()) {
+        <h4>Welcome, {{ loggedInUser() }}</h4>
+        <button (click)="handleLogin('logout')">logout</button>
+      } @else {
+        <h4>User, has Logged Out</h4>
+        <button (click)="handleLogin('login')">User Login</button>
+      }
+    </div>
+
+    <p>--------------</p>
+
+    <h2>Angular Toggle Button</h2>
+
+    <div>
+      @if (toggleButon()) {
+        <button (click)="toggleButon.set(false)" class="on-btn">ON</button>
+      } @else {
+        <button (click)="toggleButon.set(true)" class="off-btn">OFF</button>
+      }
+    </div>
+
+    <p>--------------</p>
+
+    <h2>Multiple Conditional Statement</h2>
+
+    <select [value]="grade()" (change)="selectPerformanceGrade($event)" name="" id="">
+      <option hidden value="">Select your Grade</option>
+      <option value="A">A Grade</option>
+      <option value="B">B Grade</option>
+      <option value="C">C Grade</option>
+      <option value="D">D Grade</option>
+      <option value="E">E Grade</option>
+    </select>
+
+    <div>
+      @if (grade() == 'A') {
+        <h5>Execellent, Performance is outstanding</h5>
+      } @else if (grade() == 'B') {
+        <h5>Good, Performance is above average</h5>
+      } @else if (grade() == 'C') {
+        <h5>Average, Performance is satisfactory</h5>
+      } @else if (grade() == 'D') {
+        <h5>Need Improvement, Performance is below expectations</h5>
+      } @else if (grade() == 'E') {
+        <h5>Poort, Performance is unsatisfactory</h5>
+      } @else {
+        <h5>Performance Not Measured</h5>
+      }
+    </div>
+
+    <p>--------------</p>
+
+    <h2>For Loop</h2>
+
+    <div>
+      <ul>
+        @for (user of usernameList(); track user) {
+          <li>
+            {{ user }}
+          </li>
+        }
+      </ul>
+
+      <p>--------------</p>
+      <h2>Object Array For Loop</h2>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>Email</th>
+              <th>CITY</th>
+              <th>SKILLS</th>
+              <th>EXTRA</th>
+            </tr>
+          </thead>
+
+          @for (user of userDetailList(); track user.id) {
+            <tr>
+              <td>
+                {{ $index + 1 }}
+              </td>
+              <td>
+                {{ user.name }}
+              </td>
+              <td>
+                {{ user.email }}
+              </td>
+              <td>
+                {{ user.city }}
+              </td>
+              <td>
+                @for (item of user.skills; track item) {
+                  <span>{{ item }}, </span>
+                }
+              </td>
+              <td>
+                @if ($first) {
+                  <span> ADMIN </span>
+                } @else if ($last) {
+                  <span> GUEST </span>
+                } @else {
+                  <span> USER </span>
+                  <!-- <span>Total Count {{ $count }}</span> -->
+                }
+                <br />
+                @if ($count == $index + 1) {
+                  <span>Total Count {{ $count }}</span>
+                }
+              </td>
+            </tr>
+          }
+        </table>
+
+        <div></div>
+      </div>
+
+      <p>--------------</p>
+      <h2>Switch Statement</h2>
+
+      <select name="" id="" (change)="selectDepartment($event)">
+        <option value="">Select Your Department</option>
+        <option value="IT">IT</option>
+        <option value="Accounts">Accounts</option>
+        <option value="Sales">Sales</option>
+        <option value="Marketing">Marketing</option>
+      </select>
+
+      <div>
+        @switch (deptSwitch()) {
+          @case ('IT') {
+            <span>IT</span>
+          }
+          @case ('Accounts') {
+            <span>Accounts</span>
+          }
+          @case ('Sales') {
+            <span>Sales</span>
+          }
+          @case ('Marketing') {
+            <span>Marketing</span>
+          }
+          @default {
+            <span>Department Not Found</span>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</section>

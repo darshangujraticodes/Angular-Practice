@@ -1,0 +1,25 @@
+<hr />
+<section>
+  <div class="container">
+    <h2 class="section-title">#Property Binding</h2>
+
+    <div>
+      <ul>
+        <li>Two way binding</li>
+        <li>connect component data to html dom element</li>
+        <li>Represented as `[]` square bracket</li>
+      </ul>
+    </div>
+
+    <div>
+      <!-- this status shown through interpolation {{}} -->
+      <h4>Disability Status : {{ isDisabled }}</h4>
+
+      <!-- html dom element is controlled though property binding [] -->
+      <button [disabled]="isDisabled" (click)="handleClick()">Check Button Disability</button>
+
+      <!-- html dom elment can be updated or trigggerent based on the event using event binding () -->
+      <button (click)="disabilityToggle()">Toggle Disability</button>
+    </div>
+  </div>
+</section>
