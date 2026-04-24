@@ -1,0 +1,66 @@
+<section class="p-3">
+    <div class="cotnainer-fluid">
+        <h3 class="">
+            Todo Task Input
+        </h3> <br>
+
+        <div>
+            <div>
+                <input type="text" [value]="newTodo()" (input)="newTodo.set($event.target.value)"
+                    placeholder="Enter Your Task" />
+                <!-- <p>
+                    {{newTodo()}}
+                </p> -->
+
+
+                @if(editId() == ''){
+                    <button (click)="addTodo()" class="btn btn-primary ms-2">Submit</button>
+                }@else{
+                    <button (click)="updateTodo(editId())" class="btn btn-primary ms-2">Update</button>
+                }
+               
+                <!-- <lucide-angular [img]="LucideSquarePen" ></lucide-angular>
+                <lucide-angular [img]="LucideTrash2" ></lucide-angular> -->
+            </div>
+        </div>
+
+        <hr>
+
+        <h3 class="">
+            Todo Task List
+        </h3> <br>
+
+        <div>
+            @for(item of todos(); track item.id ){
+            <div class="d-flex justify-content-around task-list-wrap">
+                <p class="">{{$index+1}}</p>
+                <p class="">
+                    @if( item.isCompleted  ){
+                        <span> <s>{{ item.title }}</s>   </span>
+                    }@else{
+                            <span>   {{ item.title }}  </span>
+                    }
+                </p>
+                <p class="">
+                   
+                       <button   (click)="markTodoStatus(item.id)" class="btn  border mx-2" 
+                        [class.btn-success]="item.isCompleted"
+  [class.btn-outline-danger]="!item.isCompleted"
+                       >
+                        <lucide-angular [img]="LucideCheck" ></lucide-angular>
+                      </button>
+                  
+                      <button (click)="editTodo(item.id)" class="btn btn-light border mx-2">
+                        <lucide-angular [img]="LucideSquarePen" ></lucide-angular>
+                      </button>
+
+                      <button (click)="deleteTodo(item.id)" class="btn btn-light border mx-2">
+                        <lucide-angular [img]="LucideTrash2" ></lucide-angular>
+                      </button>
+                  
+                </p>
+            </div>
+            }
+        </div>
+    </div>
+</section>

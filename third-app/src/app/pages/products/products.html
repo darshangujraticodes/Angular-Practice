@@ -1,0 +1,29 @@
+<section>
+  <div class="container">
+    <h2 class="text-center">Products Details</h2>
+
+    <button (click)="loadItProducts()">Load JSON IT Products</button>
+
+    <button (click)="hideItProducts()">Hide JSON IT Products</button>
+
+    <div class="m-3 products-wrap">
+      @for (product of itProducts(); track product.id) {
+        <div class="productBox">
+          <h4>
+            {{ product.name }}
+          </h4>
+          <p>
+            {{ product.company }}
+          </p>
+          <p>
+            <b> {{ product.price | currency: 'INR' }} </b>
+          </p>
+
+          <p>
+            Warrant Available : <span>{{ product.warranty_available ? '✔️' : '❌' }}</span>
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+<section>
+  <div class="container-fluid">
+    <form class="form-wrapper" [formGroup]="form" (ngSubmit)="submit()">
+      <div>
+        <input type="text" placeholder="enter username" formControlName="username" />
+        @if (form.controls.username.touched && form.controls.username.invalid) {
+          @if (form.controls.username.errors?.['required']) {
+            <p style="color: red">Username is required</p>
+          }
+
+          @if (form.controls.username.errors?.['minlength']) {
+            <p style="color: red">Minimum 3 characters required</p>
+          }
+        }
+      </div>
+
+      <div>
+        <input type="email" placeholder="enter email" formControlName="email" />
+        @if (form.controls.email.touched && form.controls.email.invalid) {
+          @if (form.controls.email.errors?.['required']) {
+            <p style="color: red">Email is required</p>
+          }
+
+          @if (form.controls.email.errors?.['email']) {
+            <p style="color: red">Invalid email format</p>
+          }
+        }
+      </div>
+
+      <div>
+        <select formControlName="country">
+          <option hidden value="">Select Country</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+        </select>
+
+        @if (form.controls.country.touched && form.controls.country.invalid) {
+          <p style="color: red">Select Your Country!</p>
+        }
+      </div>
+
+      <div class="">
+        <label class="me-3" for="">Gender : </label>
+        <label class="ms-1">
+          <input class="" type="radio" formControlName="gender" value="Male" />
+          Male</label
+        >
+        <label class="ms-1">
+          <input class="ms-3" type="radio" formControlName="gender" value="Female" />
+          Female</label
+        >
+
+        @if (form.controls.gender.touched && form.controls.gender.invalid) {
+          <p style="color: red">Select Your Gender</p>
+        }
+      </div>
+
+      <div>
+        <label>Hobbies</label>
+
+        @for (hobby of hobbyArray; track hobby) {
+          <label class="ms-1">
+            <input class="ms-3" type="checkbox" [value]="hobby" (change)="onHobbyChange($event)" />
+            {{ hobby }}
+          </label>
+        }
+
+        @if (hobbiesArray.touched && hobbiesArray.invalid) {
+          <p style="color: red">Select at least one hobby</p>
+        }
+      </div>
+
+      <div>
+        <label class="ms-1" for="">
+          <input class="" type="checkbox" formControlName="terms" />
+          I agree to all Terms and Condition
+        </label>
+
+        @if (form.controls.terms.touched && form.controls.terms.invalid) {
+          <p style="color: red">You must accept terms</p>
+        }
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>

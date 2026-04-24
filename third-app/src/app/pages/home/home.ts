@@ -35,4 +35,8 @@ export class Home {
   navigateRouteParams() {
     this.router.navigate(['about', 'anil', '45']);
   }
+
+  navigateToProducts() {
+    this.router.navigate(['/api-operation']);
+  }
 }

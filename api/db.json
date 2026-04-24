@@ -1,0 +1,86 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Amit Sharma",
+      "email": "amit.sharma@example.com",
+      "age": 28,
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "name": "Priya Verma",
+      "email": "priya.verma@example.com",
+      "age": 24,
+      "is_active": true
+    },
+    {
+      "id": 3,
+      "name": "Rahul Patel",
+      "email": "rahul.patel@example.com",
+      "age": 32,
+      "is_active": false
+    },
+    {
+      "id": 4,
+      "name": "Sneha Iyer",
+      "email": "sneha.iyer@example.com",
+      "age": 27,
+      "is_active": true
+    },
+    {
+      "id": 5,
+      "name": "Arjun Singh",
+      "email": "arjun.singh@example.com",
+      "age": 30,
+      "is_active": false
+    },
+    {
+      "id": 6,
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "age": 26,
+      "is_active": true
+    },
+    {
+      "id": 7,
+      "name": "Vikram Rao",
+      "email": "vikram.rao@example.com",
+      "age": 35,
+      "is_active": true
+    },
+    {
+      "id": 8,
+      "name": "Pooja Mehta",
+      "email": "pooja.mehta@example.com",
+      "age": 29,
+      "is_active": false
+    },
+    {
+      "id": 9,
+      "name": "Karan Malhotra",
+      "email": "karan.malhotra@example.com",
+      "age": 31,
+      "is_active": true
+    },
+    {
+      "id": 10,
+      "name": "Anjali Desai",
+      "email": "anjali.desai@example.com",
+      "age": 25,
+      "is_active": true
+    }
+  ]
+}

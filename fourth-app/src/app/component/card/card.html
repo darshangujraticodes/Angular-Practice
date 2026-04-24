@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ title() }}</h5>
+    <p class="card-text">
+      {{ description() }}
+    </p>
+    <a routerLink="linkUrl()" class="btn btn-primary">{{ linkLabel }}</a>
+
+    <ng-content></ng-content>
+  </div>
+</div>

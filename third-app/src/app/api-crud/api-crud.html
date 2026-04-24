@@ -1,0 +1,14 @@
+<section>
+  <h2 class="text-center">API CRUD</h2>
+
+  <div class="products-wrap">
+    @for (user of userData(); track user.id) {
+      <div class="productBox">
+        <h4>{{ user.name }}</h4>
+        <p>
+          {{ user.email }}
+        </p>
+      </div>
+    }
+  </div>
+</section>

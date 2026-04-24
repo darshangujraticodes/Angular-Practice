@@ -8,6 +8,10 @@ import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Profile } from './pages/profile/profile';
 import { Users } from './pages/users/users';
 import { UserDetails } from './pages/user-details/user-details';
+import { Products } from './pages/products/products';
+import { ApiOperation } from './pages/api-operation/api-operation';
+import { ProductDetails } from './pages/product-details/product-details';
+import { ApiCrud } from './api-crud/api-crud';
 
 export const routes: Routes = [
   {
@@ -47,12 +51,28 @@ export const routes: Routes = [
     component: Profile,
   },
   {
+    path: 'products',
+    component: Products,
+  },
+  {
     path: 'users',
     component: Users,
   },
   {
     path: 'user-details/:id',
     component: UserDetails,
+  },
+  {
+    path: 'api-operation',
+    component: ApiOperation,
+  },
+  {
+    path: 'product-details/:id',
+    component: ProductDetails,
+  },
+  {
+    path: 'api-crud',
+    component: ApiCrud,
   },
   {
     path: '**',

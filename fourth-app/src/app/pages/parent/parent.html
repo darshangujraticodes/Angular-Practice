@@ -1,0 +1,29 @@
+<section class="py-3">
+  <div class="container-fluid">
+    <!-- <h1 class="text-center">Parent Page</h1> -->
+
+    <div>
+      <h5 class="">Parent Component</h5>
+
+      <p>Parent Data : {{ parentData() }}</p>
+
+      <p>Child Data : {{ child.messg() }}</p>
+    </div>
+
+    <div>
+      <h5>Count = {{ count.count() }}</h5>
+
+      <button (click)="count.increment()" class="m-2 btn btn-success">+</button>
+      <button (click)="count.decrement()" class="m-2 btn btn-danger">-</button>
+      <button (click)="count.reset()" class="m-2 btn btn-dark">Reseet</button>
+    </div>
+
+    <div class="mt-4">
+      <!-- parent to child data -->
+      <app-child [parentData]="parentData()"></app-child>
+
+      <!-- child to parent data -->
+      <app-child #child></app-child>
+    </div>
+  </div>
+</section>

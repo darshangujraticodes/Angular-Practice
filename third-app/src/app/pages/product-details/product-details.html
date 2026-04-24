@@ -1,0 +1,18 @@
+<section>
+  <div class="container">
+    <div class="productDetails">
+      <img [src]="filteredData()?.thumbnail" alt="" class="img-fluid" />
+      <h4>
+        {{ filteredData()?.title }}
+      </h4>
+      <p>
+        {{ filteredData()?.description }}
+      </p>
+      <p>
+        <b>
+          {{ filteredData()?.price | currency: 'USD' }}
+        </b>
+      </p>
+    </div>
+  </div>
+</section>

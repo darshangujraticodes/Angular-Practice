@@ -1,0 +1,21 @@
+<section>
+  <div class="container">
+    <h2 class="text-center">API DETAILS</h2>
+
+    <div class="products-wrap">
+      @for (product of productData(); track product.id) {
+        <a class="productBox" [routerLink]="['/product-details', product.id]">
+          <img [src]="product.thumbnail" alt="product image" width="150" />
+          <h5>
+            {{ product.title }}
+          </h5>
+          <p>
+            <b>
+              {{ product.price | currency: 'USD' }}
+            </b>
+          </p>
+        </a>
+      }
+    </div>
+  </div>
+</section>

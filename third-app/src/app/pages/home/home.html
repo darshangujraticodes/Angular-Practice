@@ -28,9 +28,16 @@
       <button (click)="navigateRouteParams()" class="btn">Navigate Route Params</button>
     </div>
 
-    <hr />
     <!-- <h4 class="text-center">Dynamic Routing</h4> -->
 
     <!-- <app-users></app-users> -->
+
+    <hr />
+    <section class="justify-center">
+      <a class="btn" routerLink="/products">Products</a>
+
+      <button class="btn" (click)="navigateToProducts()">API Operation</button>
+      <a routerLink="/api-crud" class="btn">API CRUD</a>
+    </section>
   </div>
 </section>
