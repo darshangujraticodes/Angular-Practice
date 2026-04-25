@@ -1,0 +1,30 @@
+<section class="py-3">
+  <div class="container-fluid">
+    <div>
+      <h1 class="text-center">Products Page</h1>
+
+      <a routerLink="/products/101" class="btn btn-dark m-3"> Product 101 </a>
+      <a routerLink="/products/102" class="btn btn-dark m-3"> Product 102 </a>
+    </div>
+
+    <div>
+      <h5>Search : {{ search() }}</h5>
+
+      <div class="mb-4">
+        <input
+          type="text"
+          placeholder="search"
+          [value]="search()"
+          (input)="search.set($event.target.value); updateUrl()"
+        />
+      </div>
+      <div>
+        <ul>
+          @for (item of filteredData(); track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

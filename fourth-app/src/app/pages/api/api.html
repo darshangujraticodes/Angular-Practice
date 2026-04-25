@@ -1,0 +1,109 @@
+<section class="m-3">
+  <div class="container-fluid">
+    <div>
+      <h1 class="text-center">API CRUD</h1>
+    </div>
+
+    <hr />
+    <div>
+      <label for="">Name : </label>
+      <input
+        class="ms-3"
+        placeholder=""
+        [value]="name()"
+        (input)="name.set($event.target.value)"
+        type="text"
+      />
+      <br />
+      <br />
+      <label for="">Email : </label>
+      <input
+        class="ms-3"
+        [value]="email()"
+        (input)="email.set($event.target.value)"
+        placeholder=""
+        type="email"
+      />
+      <br />
+      <br />
+      <label for="">Age : </label>
+      <input
+        class="ms-3"
+        placeholder=""
+        [value]="age()"
+        (input)="onAgeChange($event)"
+        type="number"
+      />
+      <br />
+      <br />
+      <label for="">Active : </label>
+      <select [value]="isActive() === null ? '' : isActive()" (change)="onStatusChange($event)">
+        <option value="">Are You Active in Community</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+      <br />
+      <br />
+
+      <button (click)="handleSubmit()" class="btn btn-dark">
+        {{ editingId() === null ? 'Submit' : 'Update' }}
+      </button>
+    </div>
+
+    <!-- <div>
+      Name : {{ name() }} <br />
+      email : {{ email() }} <br />
+      age : {{ age() }}
+    </div> -->
+
+    <hr />
+
+    <div class="d-none">
+      @for (todo of todoData(); track todo.id) {
+        <p>{{ todo.id }} | {{ todo.title }}</p>
+      }
+    </div>
+
+    <div class="">
+      <table>
+        <thead>
+          <tr>
+            <th class="user-id">No.</th>
+            <th class="user-name">Name</th>
+            <th class="user-name">isActive</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (user of userData(); track user.id) {
+            <tr>
+              <td class="user-id">
+                {{ $index + 1 }}
+              </td>
+              <td class="user-name">
+                {{ user.name }}
+              </td>
+              <td class="user-name">
+                <button
+                  class="btn"
+                  [class.btn-success]="user.is_active"
+                  [class.btn-danger]="!user.is_active"
+                >
+                  {{ user.is_active ? 'Active' : 'Inactive' }}
+                </button>
+              </td>
+              <td class="d-flex justify-content-center gap-3">
+                <button (click)="updateUserData(user)" class="btn btn-light">
+                  <lucide-angular class="lucide-icon" [img]="LucideSquarePen"></lucide-angular>
+                </button>
+                <button (click)="deleteSelectedUser(user)" class="btn btn-light">
+                  <lucide-angular [img]="LucideTrash2"></lucide-angular>
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
