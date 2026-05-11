@@ -7,6 +7,7 @@ import { Parent } from './pages/parent/parent';
 import { ReactiveForm } from './pages/reactive-form/reactive-form';
 import { Products } from './pages/products/products';
 import { Api } from './pages/api/api';
+import { Review } from './projects/user-review/review/review';
 
 export const routes: Routes = [
   {
@@ -40,6 +41,10 @@ export const routes: Routes = [
   {
     path: 'api-crud',
     component: Api,
+  },
+  {
+    path: 'user-review-project',
+    component: Review,
   },
   {
     path: '**',

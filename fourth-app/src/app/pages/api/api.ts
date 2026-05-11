@@ -4,7 +4,7 @@ import { TodoService } from '../../services/todos/todo-service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { UserService } from '../../services/users/user-service';
 
-import { LucideAngularModule, LucideSquarePen, LucideTrash2 } from 'lucide-angular';
+import { LucideAngularModule, LucideSquarePen, LucideTrash2, ThumbsDown } from 'lucide-angular';
 
 @Component({
   selector: 'app-api',
@@ -50,6 +50,16 @@ export class Api {
     this.age.set(value ? Number(value) : null);
   }
 
+  onUserStatusChange(user: User) {
+    console.log(user);
+
+    this.userService.updateUserStatus(user.id!, !user.is_active).subscribe(() => {
+      this.userData.update((prev) =>
+        prev.map((item) => (item.id === user.id ? { ...item, is_active: !item.is_active } : item)),
+      );
+    });
+  }
+
   handleSubmit() {
     // ✅ validation
     if (
@@ -84,8 +94,7 @@ export class Api {
   }
 
   updateUserData(user: User) {
-    console.log(user);
-
+    // console.log(user);
     this.editingId.set(user.id!);
     this.name.set(user.name);
     this.email.set(user.email);

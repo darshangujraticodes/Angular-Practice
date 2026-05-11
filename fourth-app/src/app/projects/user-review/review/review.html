@@ -1,0 +1,107 @@
+<section class="m-4">
+  <div class="container-fluid">
+    <div>
+      <h1 class="text-center">Developer Profile</h1>
+    </div>
+
+    <div class="developer-card-wrap">
+      <div class="developer-card">
+        <h4 class="text-center">{{ displayProfileData()?.name }}</h4>
+        <div class="d-flex justify-content-center">
+          <img [src]="displayProfileData()?.image" class="dev-img" alt="" />
+        </div>
+        <p class="text-center mb-0 fw-bold">
+          ({{ displayProfileData()?.job }} | {{ displayProfileData()?.experience }} |
+          {{ displayProfileData()?.salary_lpa }} LPA )
+        </p>
+        <p class="text-center text-balance dev-text mb-0">"{{ displayProfileData()?.review }}"</p>
+
+        <div class="">
+          <h5 class="text-center">
+            [
+            @for (skill of displayProfileData()?.skills; track skill) {
+              <span>{{ skill }},</span>
+            }
+            ]
+          </h5>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <div>
+            <button (click)="copyText(displayProfileData()?.email || '')" class="btn btn-dark m-2">
+              <lucide-angular [img]="LucideAtSign"></lucide-angular>
+            </button>
+          </div>
+          <div>
+            <button
+              (click)="copyText(displayProfileData()?.contact || '')"
+              class="btn btn-dark m-2"
+            >
+              <lucide-angular [img]="LucidePhoneCall"></lucide-angular>
+            </button>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <button class="btn btn-success" (click)="prevDevProfile()">Previous</button>
+          <button
+            class="btn btn-success"
+            (click)="nextDevProfile()"
+            [disabled]="!displayProfileData()"
+          >
+            Next
+          </button>
+        </div>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <button (click)="surpriseDevProfile()" class="btn btn-danger">Surprise</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="developer-card-wrap d-none">
+      @for (user of devProfileData(); track user.id) {
+        <div class="developer-card">
+          <h4 class="text-center">{{ user.name }}</h4>
+          <div class="d-flex justify-content-center">
+            <img [src]="user.image" class="dev-img" alt="" />
+          </div>
+          <p class="text-center mb-0 fw-bold">
+            ({{ user.job }} | {{ user.experience }} | {{ user.salary_lpa }} LPA )
+          </p>
+          <p class="text-center text-balance dev-text mb-0">"{{ user.review }}"</p>
+
+          <div class="">
+            <h5 class="text-center">
+              [
+              @for (skill of user.skills; track skill) {
+                <span>{{ skill }},</span>
+              }
+              ]
+            </h5>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div>
+              <a [href]="'mailto:' + user?.email" class="btn btn-dark m-2">
+                <lucide-angular [img]="LucideAtSign"></lucide-angular>
+              </a>
+            </div>
+            <div>
+              <a [href]="'tel:+91' + user.contact" class="btn btn-dark m-2">
+                <lucide-angular [img]="LucidePhoneCall"></lucide-angular>
+              </a>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center gap-3 mt-3">
+            <button class="btn btn-success" (click)="prevDevProfile()">Previous</button>
+            <button class="btn btn-success" (click)="nextDevProfile()">Next</button>
+          </div>
+          <div class="d-flex justify-content-center gap-3 mt-3">
+            <button class="btn btn-danger">Surprise</button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

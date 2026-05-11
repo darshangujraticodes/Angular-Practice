@@ -88,8 +88,9 @@
                   class="btn"
                   [class.btn-success]="user.is_active"
                   [class.btn-danger]="!user.is_active"
+                  (click)="onUserStatusChange(user)"
                 >
-                  {{ user.is_active ? 'Active' : 'Inactive' }}
+                  {{ user.is_active ? 'Active' : 'InActive' }}
                 </button>
               </td>
               <td class="d-flex justify-content-center gap-3">

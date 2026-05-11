@@ -23,9 +23,6 @@
       "postId": "1"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  },
   "users": [
     {
       "id": "1",
@@ -74,49 +71,177 @@
       "name": "Vikram Rao",
       "email": "vikram.rao@example.com",
       "age": 35,
-      "is_active": true
+      "is_active": true,
+      "status": false
     },
     {
-      "id": "8",
       "name": "Pooja Mehta",
       "email": "pooja.mehta@example.com",
       "age": 29,
-      "is_active": false
+      "is_active": true,
+      "id": "8"
     },
     {
       "id": "9",
       "name": "Karan Malhotra",
       "email": "karan.malhotra@example.com",
       "age": 31,
-      "is_active": true
+      "is_active": true,
+      "status": true
     },
     {
       "id": "10",
       "name": "Anjali Desai",
       "email": "anjali.desai@example.com",
       "age": 25,
-      "is_active": true
+      "is_active": true,
+      "status": true
     },
     {
       "name": "mukul ",
       "email": "mukultest@gmail.com",
       "age": 5,
       "is_active": true,
-      "id": "K6bTLAbO-Hc"
+      "id": "K6bTLAbO-Hc",
+      "status": true
     },
     {
       "name": "prasad ",
       "email": "prasad@gmail.com",
       "age": 5,
       "is_active": false,
-      "id": "odnuHDfxzuk"
+      "id": "odnuHDfxzuk",
+      "status": true
     },
     {
-      "name": "aditya saini",
-      "email": "adityasaini@gmail.com",
-      "age": 23,
-      "is_active": false,
-      "id": "k18C6nsZnTM"
+      "name": "Aditya saini",
+      "email": "adityasaini17@gmail.com",
+      "age": 26,
+      "is_active": true,
+      "id": "k18C6nsZnTM",
+      "status": false
+    }
+  ],
+  "developer_profile": [
+    {
+      "id": "1",
+      "name": "Amit Sharma",
+      "email": "amit.sharma@example.com",
+      "contact": "9696895785",
+      "image": "https://randomuser.me/api/portraits/men/58.jpg",
+      "job": "MERN Stack Developer",
+      "salary_lpa": 9,
+      "experience": "2-4 years",
+      "skills": ["MongoDB", "Express.js", "React", "Node.js"],
+      "review": "MERN stack enables full-stack JavaScript development with scalability and fast performance."
+    },
+    {
+      "id": "2",
+      "name": "Priya Verma",
+      "email": "priya.verma@example.com",
+      "contact": "9876543210",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg",
+      "job": "MEAN Stack Developer",
+      "salary_lpa": 8.5,
+      "experience": "3-5 years",
+      "skills": ["MongoDB", "Express.js", "Angular", "Node.js"],
+      "review": "MEAN stack provides a structured approach for building dynamic web applications."
+    },
+    {
+      "id": "3",
+      "name": "Rahul Patel",
+      "email": "rahul.patel@example.com",
+      "contact": "9123456780",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "job": "Java Full Stack Developer",
+      "salary_lpa": 10,
+      "experience": "4-6 years",
+      "skills": ["Java", "Spring Boot", "Hibernate", "Angular"],
+      "review": "Java full stack is ideal for building secure and scalable enterprise applications."
+    },
+    {
+      "id": "4",
+      "name": "Sneha Iyer",
+      "email": "sneha.iyer@example.com",
+      "contact": "9988776655",
+      "image": "https://randomuser.me/api/portraits/women/68.jpg",
+      "job": ".NET Developer",
+      "salary_lpa": 9.5,
+      "experience": "3-5 years",
+      "skills": ["C#", "ASP.NET", "SQL Server", "Azure"],
+      "review": ".NET is widely used for developing high-performance enterprise applications."
+    },
+    {
+      "id": "5",
+      "name": "Arjun Singh",
+      "email": "arjun.singh@example.com",
+      "contact": "9012345678",
+      "image": "https://randomuser.me/api/portraits/men/76.jpg",
+      "job": "Python Full Stack Developer",
+      "salary_lpa": 8.8,
+      "experience": "2-4 years",
+      "skills": ["Python", "Django", "Flask", "React"],
+      "review": "Python stack is known for simplicity and rapid development."
+    },
+    {
+      "id": "6",
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "contact": "9090909090",
+      "image": "https://randomuser.me/api/portraits/women/12.jpg",
+      "job": "Frontend Developer",
+      "salary_lpa": 7,
+      "experience": "2-3 years",
+      "skills": ["HTML", "CSS", "JavaScript", "React"],
+      "review": "Frontend development focuses on building interactive and responsive user interfaces."
+    },
+    {
+      "id": "7",
+      "name": "Vikram Rao",
+      "email": "vikram.rao@example.com",
+      "contact": "8888888888",
+      "image": "https://randomuser.me/api/portraits/men/21.jpg",
+      "job": "DevOps Engineer",
+      "salary_lpa": 11,
+      "experience": "4-6 years",
+      "skills": ["Docker", "Kubernetes", "AWS", "CI/CD"],
+      "review": "DevOps helps automate development and deployment processes efficiently."
+    },
+    {
+      "id": "8",
+      "name": "Pooja Mehta",
+      "email": "pooja.mehta@example.com",
+      "contact": "9777777777",
+      "image": "https://randomuser.me/api/portraits/women/33.jpg",
+      "job": "Data Scientist",
+      "salary_lpa": 12,
+      "experience": "3-5 years",
+      "skills": ["Python", "Machine Learning", "Pandas", "TensorFlow"],
+      "review": "Data science enables extracting meaningful insights from data."
+    },
+    {
+      "id": "9",
+      "name": "Karan Malhotra",
+      "email": "karan.malhotra@example.com",
+      "contact": "9666666666",
+      "image": "https://randomuser.me/api/portraits/men/45.jpg",
+      "job": "Android Developer",
+      "salary_lpa": 8,
+      "experience": "2-4 years",
+      "skills": ["Kotlin", "Java", "Android SDK", "Firebase"],
+      "review": "Android development focuses on building scalable mobile applications."
+    },
+    {
+      "id": "10",
+      "name": "Anjali Desai",
+      "email": "anjali.desai@example.com",
+      "contact": "9555555555",
+      "image": "https://randomuser.me/api/portraits/women/50.jpg",
+      "job": "UI/UX Designer",
+      "salary_lpa": 6.5,
+      "experience": "2-3 years",
+      "skills": ["Figma", "Adobe XD", "Wireframing", "Prototyping"],
+      "review": "UI/UX design improves usability and enhances user experience."
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
